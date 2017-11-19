@@ -1,1 +1,1 @@
-bot: PrimitivePics
+bot: primitive-telbot
