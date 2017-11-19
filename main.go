@@ -115,14 +115,14 @@ func modifyPhoto(picName string) string {
 }
 
 func getRandomNum() string {
-	rand.Seed(int64(time.Now().Second()))
+	rand.Seed(int64(time.Now().Nanosecond()))
 	num := rand.Intn(1300-170) + 170
 	println("Num: ", num)
 	return fmt.Sprintf("%d", num)
 }
 
 func getRandomMode() string {
-	rand.Seed(int64(time.Now().Second()))
+	rand.Seed(int64(time.Now().Nanosecond()))
 	mode := rand.Intn(9)
 	println("Mode: ", mode)
 	return fmt.Sprintf("%d", mode)
