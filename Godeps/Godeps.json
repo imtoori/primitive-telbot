@@ -1,0 +1,17 @@
+{
+	"ImportPath": "primitive-telbot",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/technoweenie/multipartstreamer",
+			"Comment": "v1.0.1",
+			"Rev": "a90a01d73ae432e2611d178c18367fbaa13e0154"
+		},
+		{
+			"ImportPath": "gopkg.in/telegram-bot-api.v4",
+			"Comment": "v4.6.1",
+			"Rev": "2022d04b94f50056a09962b1ac81cdd821d20a55"
+		}
+	]
+}
