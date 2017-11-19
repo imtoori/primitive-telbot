@@ -137,6 +137,7 @@ func downloadPhotoFromURL(url string, picName string) {
 	defer response.Body.Close()
 
 	file, err := os.Create(picName)
+	defer file.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -145,5 +146,4 @@ func downloadPhotoFromURL(url string, picName string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	file.Close()
 }
