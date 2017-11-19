@@ -116,7 +116,7 @@ func modifyPhoto(picName string) string {
 
 func getRandomNum() string {
 	rand.Seed(int64(time.Now().Second()))
-	num := rand.Intn(400-170) + 170
+	num := rand.Intn(1300-170) + 170
 	println("Num: ", num)
 	return fmt.Sprintf("%d", num)
 }
