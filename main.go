@@ -17,6 +17,7 @@ import (
 	"time"
 
 	"gopkg.in/telegram-bot-api.v4"
+	"bytes"
 )
 
 const (
@@ -97,7 +98,15 @@ func modifyPhoto(picName string) string {
 
 	cmd := exec.Command("./primitive", "-i", picName, "-o", picModifiedName, "-n", num, "-m", mode, "-r", "256")
 
-	cmd.Run()
+	var stderr bytes.Buffer
+	cmd.Stderr = &stderr
+
+	err := cmd.Run()
+	if err != nil {
+		log.Println(err)
+		log.Println(stderr.String())
+	}
+
 
 	cmd = exec.Command("rm", picName)
 	go cmd.Run()
