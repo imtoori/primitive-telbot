@@ -85,7 +85,7 @@ func handlePhoto(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 
 	c := tgbotapi.NewPhotoUpload(update.Message.Chat.ID, picModifiedName)
 	bot.Send(c)
-	sendMessage(fmt.Sprint(num, " ", modeString))
+	sendMessage(fmt.Sprint(num, " ", modeString), bot, update)
 
 	println("Success")
 
