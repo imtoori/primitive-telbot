@@ -3,7 +3,8 @@ Telegram bot powered by primitive-algorithm
 
 ## Algorithm
 The original algorithm is provided by @fogleman and can be found here: https://github.com/fogleman/primitive.
-This is only a telegram bot to bring is art to people with the simplicity of a bot.
+
+This is only a telegram bot to bring his art to people with the simplicity of a bot.
 
 ## Commands
 There are no commands at the moment.
