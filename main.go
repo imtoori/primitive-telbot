@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	token          = "477704380:AAFgpiVD2Zs0AkZv-VQ590K_dKCpjzKwYEE"
+	token          = ""
 	welcomeMessage = "Welcome to Primitive Pic bot!\nThe original algorithm is provided by https://github.com/fogleman/primitive\n" +
 		"I'm only writing this bot to " +
 		"bring his art to everybody via a simple telegram bot.\n" +
