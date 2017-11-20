@@ -10,5 +10,5 @@ There are no commands at the moment.
 With /start you can get a little description of the bot.
 Sending a photo it will elaborate it and send the picture back with the algorithm modifications.
 
-### Contributions
+## Contributions
 Pull requests and issues are welcome!
