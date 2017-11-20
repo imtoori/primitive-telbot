@@ -1,5 +1,6 @@
 # Primitive-telbot
-Telegram bot powered by primitive-algorithm
+Telegram bot powered by primitive-algorithm.
+You can find the bot on telegram @PrimitivePics_bot
 
 ## Algorithm
 The original algorithm is provided by @fogleman and can be found here: https://github.com/fogleman/primitive.
