@@ -109,23 +109,23 @@ func modifyPhoto(picName string) (picModifiedName string, modeString string, num
 	}
 
 	switch mode {
-	case 0:
+	case "0":
 		modeString = "combo"
-	case 1:
+	case "1":
 		modeString = "triangles"
-	case 2:
+	case "2":
 		modeString = "rectangles"
-	case 3:
+	case "3":
 		modeString = "ellipses"
-	case 4:
+	case "4":
 		modeString = "circles"
-	case 5:
+	case "5":
 		modeString = "rotated rectangles"
-	case 6:
+	case "6":
 		modeString = "beziers"
-	case 7:
+	case "7":
 		modeString = "rotated ellipses"
-	case 8:
+	case "8":
 		modeString = "polygons"
 	}
 
