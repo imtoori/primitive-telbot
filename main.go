@@ -92,10 +92,10 @@ func handlePhoto(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 }
 
 func modifyPhoto(picName string) (picModifiedName string, modeString string, num string) {
-	picModifiedName := fmt.Sprint(picName, "_mod.png")
+	picModifiedName = fmt.Sprint(picName, "_mod.png")
 
 	mode := getRandomMode()
-	num := getRandomNum()
+	num = getRandomNum()
 
 	cmd := exec.Command("./primitive", "-i", picName, "-o", picModifiedName, "-n", num, "-m", mode, "-r", "256")
 
