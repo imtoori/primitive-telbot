@@ -1,4 +1,4 @@
-# primitive-telbot
+# Primitive-telbot
 Telegram bot powered by primitive-algorithm
 
 ## Algorithm
