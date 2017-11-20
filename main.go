@@ -81,16 +81,17 @@ func handlePhoto(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 
 	//TODO: say I'm only using a raspberry to take donations
 	sendMessage("Modifying the photo.. It will take a while", bot, update)
-	picModifiedName := modifyPhoto(picName)
+	picModifiedName, modeString, num := modifyPhoto(picName)
 
 	c := tgbotapi.NewPhotoUpload(update.Message.Chat.ID, picModifiedName)
 	bot.Send(c)
+	sendMessage(fmt.Sprint(num, " ", modeString))
 
 	println("Success")
 
 }
 
-func modifyPhoto(picName string) string {
+func modifyPhoto(picName string) (picModifiedName string, modeString string, num string) {
 	picModifiedName := fmt.Sprint(picName, "_mod.png")
 
 	mode := getRandomMode()
@@ -107,11 +108,31 @@ func modifyPhoto(picName string) string {
 		log.Println(stderr.String())
 	}
 
+	switch mode {
+	case 0:
+		modeString = "combo"
+	case 1:
+		modeString = "triangles"
+	case 2:
+		modeString = "rectangles"
+	case 3:
+		modeString = "ellipses"
+	case 4:
+		modeString = "circles"
+	case 5:
+		modeString = "rotated rectangles"
+	case 6:
+		modeString = "beziers"
+	case 7:
+		modeString = "rotated ellipses"
+	case 8:
+		modeString = "polygons"
+	}
 
 	cmd = exec.Command("rm", picName)
 	go cmd.Run()
 
-	return picModifiedName
+	return
 }
 
 func getRandomNum() string {
