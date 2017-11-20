@@ -79,7 +79,6 @@ func handlePhoto(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 	picName := fmt.Sprint(update.Message.From.UserName, update.Message.Chat.ID, update.Message.MessageID)
 	downloadPhotoFromURL(picURL, picName)
 
-	//TODO: say I'm only using a raspberry to take donations
 	sendMessage("Modifying the photo.. It will take a while", bot, update)
 	picModifiedName, modeString, num := modifyPhoto(picName)
 
